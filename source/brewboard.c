@@ -1,6 +1,6 @@
 #include <3ds.h>
 #include <math.h>
-//include <textstuff.h>
+//#include "textstuff.h"
 #ifdef TEXTSTUFF_H
 #include <string.h>
 #endif
