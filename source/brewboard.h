@@ -4,7 +4,6 @@
  *
  * Created on December 9, 2014, 9:49 PM
  */
-
 #ifndef BREWBOARD_H
 #define	BREWBOARD_H
 

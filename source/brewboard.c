@@ -1,7 +1,9 @@
 #include <3ds.h>
 #include <math.h>
+//include <textstuff.h>
+#ifdef TEXTSTUFF_H
 #include <string.h>
-#include "textstuff.h"
+#endif
 #include "keyboard_bin.h"
 
 void gfxDrawSprite(gfxScreen_t screen, gfx3dSide_t side, u8* spriteData, u16 width, u16 height, s16 x, s16 y) {
