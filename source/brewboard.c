@@ -30,10 +30,6 @@ void gfxDrawSprite(gfxScreen_t screen, gfx3dSide_t side, u8* spriteData, u16 wid
     }
 }
 
-void bbDisplayText(char* text) {
-    tsDrawWord(GFX_BOTTOM, GFX_LEFT, (char*)text, 10, 220, 0, 0, 0);
-}
-
 char bbHandleKeyboard() {
     const char chars[60] = "!1234567890\x08qwertyuiop\13\13asdfghjkl-\13\13zxcvbnm,.?\13\13\0\0\0     \0\0\0\0";
     static touchPosition tpos;
@@ -48,6 +44,11 @@ char bbHandleKeyboard() {
         chr = chars[(u16)(floor(tpos.px/26)+12*floor((tpos.py-78)/26))];
         
     return chr;
+}
+
+#ifdef TEXTSTUFF_H
+void bbDisplayText(char* text) {
+    tsDrawWord(GFX_BOTTOM, GFX_LEFT, (char*)text, 10, 220, 0, 0, 0);
 }
 
 char* bbHandleKeyboardBlocking(char* text) {
@@ -81,3 +82,4 @@ char* bbHandleKeyboardBlocking(char* text) {
     }
     return (char*)out;
 }
+#endif
