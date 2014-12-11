@@ -43,7 +43,7 @@ char bbHandleKeyboard() {
     gfxDrawSprite(GFX_BOTTOM, GFX_LEFT, (u8*)keyboard_bin, 240, 320, 0, 0);
         
     if (tpos.px >= 1 && tpos.px <= 312 && tpos.py >= 78 && tpos.py <= 208 && kDown & KEY_TOUCH)
-        chr = chars[(u16)(floor(tpos.px/26)+12*floor((tpos.py-78)/26))];
+        chr = chars[(u8)(floor(tpos.px/26)+12*floor((tpos.py-78)/26))];
         
     return chr;
 }
