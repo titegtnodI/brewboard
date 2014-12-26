@@ -11,7 +11,7 @@
 extern "C" {
 #endif
 
-char* bbHandleKeyboard();
+char bbHandleKeyboard();
 
 #ifdef TEXTSTUFF_H
 void bbDisplayText(char* text);
